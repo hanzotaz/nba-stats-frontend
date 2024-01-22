@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 async function getData() {
   const res = await fetch(
     "http://127.0.0.1:5001/teams?team=San Antonio Spurs",
@@ -19,21 +15,8 @@ async function getData() {
   return data;
 }
 
-const Teams = () => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await getData();
-        setData(result);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
-  }, []);
+const Teams = async () => {
+  const data = await getData();
 
   return (
     <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
