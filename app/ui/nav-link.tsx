@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 const links = [
-  { name: "Home", href: "/" },
-  { name: "Teams", href: "/stats/teams" },
-  { name: "Players", href: "/stats/players" },
+  { name: "home", href: "/" },
+  { name: "teams", href: "/stats/teams" },
+  { name: "players", href: "/stats/players" },
 ];
 
 export default function NavLinks() {
@@ -19,7 +19,7 @@ export default function NavLinks() {
         <Link
           key={link.name}
           href={link.href}
-          className={clsx("text-white hover:text-gray-300", {
+          className={clsx("text-white hover:text-gray-300 hover:transform hover:scale-110", {
             "text-gray-300": pathname === link.href,
           })}
         >
