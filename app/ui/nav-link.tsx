@@ -6,6 +6,7 @@ import clsx from "clsx";
 
 const links = [
   { name: "home", href: "/" },
+  { name: "games", href: "/stats/games" },
   { name: "teams", href: "/stats/teams" },
   { name: "players", href: "/stats/players" },
 ];
